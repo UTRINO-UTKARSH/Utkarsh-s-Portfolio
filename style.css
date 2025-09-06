@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  color: #222;
+  background-color: #fafafa; /* soft background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Use Poppins for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* bold headings */
+  color: #111; /* darker for contrast */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    max-width: 100%;
+    min-width: max-content;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 3em;
+    font-weight: bold;
+    margin: 0.5em;
+}
+ul li{
+    text-shadow: 0.09em 0.03em rgb(185, 190, 26);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+ul li:hover{
+    text-shadow: 0.12em 0.01em rgba(232, 161, 20, 0.579);
+    transform: scale(1.1);
+}
+ul li::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px; /* adjust distance below text */
+  width: 0%;
+  height: 2px;
+  background: #13473c;
+  transition: width 0.4s ease;
+}
+ul li:hover::after {
+  width: 100%;
+}
+nav ul .logo{
+    margin-right: 12em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: y;
+    color: #111;
+}
+.container{
+    display: flex;
+    gap: 2em;
+    line-height: 1.5em;
+    border-radius: 1.2em;
+    padding: 1.2em;
+    min-width: max-content;
+    border: 2px solid rgba(161, 160, 152, 0.579);
+    min-height: fit-content;
+    width: auto;
+    margin: 2em;
+}
+.outline1{
+    border-radius: 0.7em;
+    border: 2px solid black;
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+}
+.outline2{
+    border-radius: 0.7em;
+    border: 2px solid black;
+    min-width: fit-content;
+    position: relative;
+    height: 15em;
+    width: 14em;
+    margin: 1em;
+    transform:  rotate(356deg) translatex(-1.5em) translateY(-1.6em);
+    z-index:1;
+    background-color: #ffffff;
+}
+/* Container for the image (like a polaroid card) */
+.photo-card {
+  display: inline-block;
+  flex-direction: column;
+  background: white;
+  margin: 1.5em 1em 1.9em 1.5em;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: translateX(1em) rotate(4deg); /* tilt effect */
+  transition: transform 0.2s ease;
+
+}
+
+/* Smooth hover effect */
+.photo-card:hover {
+  transform: rotate(-4deg) scale(1.05);
+}
+
+/* The image itself */
+.head-img {
+    display: block;
+    width: 13rem;     
+    height: 10em;       
+    object-fit: cover;
+    border-radius: 8px; 
+}
+.content{
+    margin: 2em;
+}
+.content span{
+    color: blue;
+    /* some code.. */
+}.skill{
+    display: flex;
+    gap: 2em;
+    margin-top:0.5em;
+}
+.skill1{
+    border-radius:1em ;
+    background: linear-gradient(90deg, #FF8008, #FFC837);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0.34em;
+    border:2px solid black;
+    transition: all 0.5s ease;
+    /* background: linear-gradient(135deg, #1f1c2c, #928DAB); */
+}
+.skill1:hover{
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #00C6FF, #0072FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.para p{
+    /* some codde */
+    max-width: 40ch; /* controls text width (40 characters wide) */
+    line-height: 1.6em; 
+    font-size: 1em; 
+    color: #333;
+    margin-top: 1em;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Montserrat Alternates';
+    /* font-size: 1.5em; */
+    line-height: 1.2em;
+    color: #222;
+}
+/* .tech{
+    display: flex;
+    flex-direction: column;
+    margin: 1em; 
+    justify-content: center;
+    align-items: center;
+    max-width: 40ch;
+} */
+
+/* .tech span{
+    border: 2px solid #222;
+    padding: 0.35em;
+    border-radius: 0.4em;
+    background-color: rgba(115, 112, 112, 0.388);
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+    border: 1px solid rgba(0,0,0,0.06);
+} */
+.technical1{
+    margin: 1em;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: xx-large;
+    text-shadow: 0.12em 0.01em 2px rgba(232, 161, 20, 0.579);
+    min-width: max-content;
+    transition: all 0.5s ease-in-out;
+}
+.technical1:hover{
+    text-shadow: 0.12em 0.01em rgba(20, 221, 232, 0.579);
+    transform: scale(1.1);
+}
+ul li::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px; /* adjust distance below text */
+  width: 0%;
+  height: 2px;
+  background: #13473c;
+  transition: width 0.4s ease;
+}
+ul li:hover::after {
+  width: 100%;
+}
+.tech{
+    margin: 1em;
+    display: grid;
+    grid-auto-flow:row ;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 1.23rem;
+    max-width:1100px;
+    margin: 0 auto;
+}
+#project{
+    margin: 6em;
+}
+.skill-card {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    width: 20ch;
+    border-radius: 12px;
+    padding: 1.2rem;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: transform 0.5s ease, box-shadow 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin: 1em;
+    min-height: fit-content;
+    text-align: center;
+}
+.skill-card:hover,
+.skill-card:focus-within{
+    transform: translateX(-7px) scale(1.1);
+    box-shadow:  0 6px 18px rgba(237, 235, 100, 0.916);
+}
+.logo i{
+   font-size: 3em;
+}
+.skill-name{
+   /* some thing */
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05em;
+  text-decoration: underline;
+  /* color: #111; */
+}
+.skill-level{
+    margin-top: auto;
+}
+.skill-level span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05em;
+    border-radius: 0.34em;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    background-color: #FF8008;
+    padding: 0.25em;
+}
+.skill-level a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05em;
+    border-radius: 0.34em;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    background-color: #FF8008;
+    padding: 0.25em;
+}
+
+.skill-level span:hover{
+    background-color: #222;
+    transform: scale(1.1);
+    color: white;
+}
+.skill-level a:hover{
+    background-color: #222;
+    transform: scale(1.1);
+    color: white;
+}
+.secrete {
+  margin: 1em;
+  justify-content: center;
+  transition: all 0.5s ease;
+  display: none;
+
+}
+.secrete p {
+  width: 20ch;
+  text-align: center;
+}
+.Project:hover+.secrete{
+    display: flex;
+}
+.ques{
+    margin:1em;
+}
+.ques input{
+  background: linear-gradient(135deg, #00c9a7, #92fe9d);
+  color: #fff;
+  border: none;
+  padding: 0.8em;
+  border-radius: 10px;
+  min-height: 5em;
+  min-width: 50ch;
+  border: 0;
+  margin: 1em;
+  font-family: 'Montserrat Alternates';
+  font-size: x-large;
+}
+.enter button{
+    padding-left: 3em;
+    font-size: large;
+    font-family: 'Montserrat Alternates';
+    padding-right: 3em;
+    border-radius: 0.35em;
+    height: 3rem;
+    border: none;
+    margin-left: 1.5em;
+    background: linear-gradient(90deg, #FF512F, #F09819);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enter button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.res{
+    top: 1em;
+    margin-left: 11em;
+    font-family: 'Montserrat Alternates';
+    flex-direction: column;
+    text-transform: capitalize;
+    font-weight: bold;
+    gap: 0.44em;
+    font-size: x-large;
+    width: 30ch;
+}
+.res span{
+    display: flex;
+    gap:1em;
+}
+.res button{
+    padding-left: 3em;
+    font-size: large;
+    font-family: 'Montserrat Alternates';
+    padding-right: 3em;
+    border-radius: 0.35em;
+    height: 3rem;
+    border: none;
+    margin-left: 1.5em;
+    background: linear-gradient(90deg, #FF512F, #F09819);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.res button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
